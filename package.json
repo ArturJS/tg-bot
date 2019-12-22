@@ -1,0 +1,26 @@
+{
+  "name": "tg-bot",
+  "version": "1.0.0",
+  "description": "Trying out telegram bot api in conjunction with machine learning",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArturJS/tg-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArturJS/tg-bot/issues"
+  },
+  "homepage": "https://github.com/ArturJS/tg-bot#readme",
+  "dependencies": {
+    "https-proxy-agent": "^4.0.0",
+    "socks5-https-client": "^1.2.1",
+    "telegraf": "^3.34.1"
+  }
+}
