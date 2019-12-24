@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/ArturJS/tg-bot#readme",
   "dependencies": {
-    "https-proxy-agent": "^4.0.0",
+    "dotenv-safe": "^8.2.0",
     "socks5-https-client": "^1.2.1",
     "telegraf": "^3.34.1"
   }
