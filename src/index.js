@@ -1,4 +1,3 @@
-require("dotenv-safe").config();
 
 const Telegraf = require("telegraf");
 const SocksAgent = require("socks5-https-client/lib/Agent");
@@ -11,12 +10,21 @@ const socksAgent = new SocksAgent({
   socksPassword: ""
 });
 
+console.log(process.env.NODE_ENV)
+
+const isProd = process.env.NODE_ENV === 'production';
+
+require("dotenv-safe").config();
+
 const config = {
-  token: process.env.BOT_TOKEN
+  token: process.env.BOT_TOKEN,
+  isProd
 };
 
+console.log(JSON.stringify(config, null, 4));
+
 const bot = new Telegraf(config.token, {
-  telegram: { agent: socksAgent }
+  telegram: { agent: config.isProd ? null : socksAgent }
 });
 
 bot.start(ctx => ctx.reply("Welcome"));

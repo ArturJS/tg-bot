@@ -4,7 +4,9 @@
   "description": "Trying out telegram bot api in conjunction with machine learning",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/index.js",
+    "start": "cross-env NODE_ENV='production' npm run go",
+    "dev": "cross-env NODE_ENV='development' npm run go",
+    "go": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +21,7 @@
   },
   "homepage": "https://github.com/ArturJS/tg-bot#readme",
   "dependencies": {
+    "cross-env": "^6.0.3",
     "dotenv-safe": "^8.2.0",
     "socks5-https-client": "^1.2.1",
     "telegraf": "^3.34.1"
